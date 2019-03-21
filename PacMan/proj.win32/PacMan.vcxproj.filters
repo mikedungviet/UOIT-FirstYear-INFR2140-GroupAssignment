@@ -21,6 +21,21 @@
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Effect.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="EffectSprite.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="LightEffect.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Pacman.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="Ghost.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -31,6 +46,24 @@
     </ClInclude>
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="EffectSprite.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="LightEffect.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Pacman.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghost.h">
+      <Filter>win32</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
