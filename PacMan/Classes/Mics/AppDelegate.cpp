@@ -15,12 +15,11 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLViewImpl::create("Hello World");
-        glview->setFrameSize(640, 480);
+		glview = GLViewImpl::createWithRect("PacMan", cocos2d::Rect(0, 0, 1920, 1080));
         director->setOpenGLView(glview);
     }
 
-    auto scene = HelloWorld::createScene();
+    auto scene = Level1::createScene();
     director->runWithScene(scene);
 
     return true;
