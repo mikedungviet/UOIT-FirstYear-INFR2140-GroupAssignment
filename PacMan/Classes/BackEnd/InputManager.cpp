@@ -1,11 +1,18 @@
+/**
+ * @author Mike Pham - 100706123
+ * @author Rebecca Buckle - 100702016
+ * @author Maija Kinnunen - 100697620
+ */
 #include "BackEnd/InputManager.h"
-#include "Pacman/Pacman.h"
+#include "Game Objects/Pacman/Pacman.h"
 
 //Typedef
 #define KEYCODE cocos2d::EventKeyboard::KeyCode
 
-///<summary>Constructor for the keyboard manager </summary>
-/// <param name="aPacmanPtr">A pointer for class Pacman that can be used to control </param>
+/**
+ *Constructor for the keyboard manager
+ *@param aPacmanPtr A pointer for class Pacman that can be used to control
+ */
 KeyBoardInputManager::KeyBoardInputManager(Pacman *aPacmanPtr)
 	:pacManInstance(aPacmanPtr)
 {
@@ -14,22 +21,28 @@ KeyBoardInputManager::KeyBoardInputManager(Pacman *aPacmanPtr)
 	listener->onKeyReleased = CC_CALLBACK_2(KeyBoardInputManager::onKeyReleased, this);
 }
 
-///<summary>Destructor for the keyboard manager. This will delete any dynamically allocated variables
-/// </summary>
+/**
+ *Destructor for the keyboard manager. This will delete any dynamically allocated variables
+ */
 KeyBoardInputManager::~KeyBoardInputManager()
 {
 	delete listener;
 }
 
-///<summary>This function returns the keyboard event listener pointer </summary>
+/**
+ *This function returns the keyboard event listener pointer
+ *@return Return cocos2d::EventListenerKeyboard pointer
+ */
 cocos2d::EventListenerKeyboard* KeyBoardInputManager::getListener() const
 {
 	return listener;
 }
-///<summary>This function processes when a key is pressed down
-/// </summary>
-/// <param name="keyCode">What key is being pressed</param>
-/// <param name="event">cocos2d event dispatcher to set the key pressed to true for processing </param>
+
+/**
+ *This function processes when a key is pressed down
+ *@param keyCode The key being pressed
+ *@param event Cocos2d event dispatcher to set the key pressed to true for processing
+ */
 void KeyBoardInputManager::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
 {
 	switch (keyCode)
@@ -51,10 +64,11 @@ void KeyBoardInputManager::onKeyPressed(cocos2d::EventKeyboard::KeyCode keyCode,
 	}
 }
 
-///<summary>This function processes when a pressed key is released
-/// </summary>
-/// <param name="keyCode">What key is being pressed</param>
-/// <param name="event">cocos2d event dispatcher to set the key pressed to true for processing </param>
+/**
+ *This function processes when a pressed key is released
+ *@param keyCode The key being released
+ *@param event Cocos2d event dispatcher to set the key pressed to true for processing
+ */
 void KeyBoardInputManager::onKeyReleased(cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event)
 {
 	switch (keyCode)

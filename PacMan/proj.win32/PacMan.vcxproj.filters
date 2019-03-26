@@ -7,14 +7,26 @@
     <Filter Include="resource">
       <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src">
-      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Pacman">
-      <UniqueIdentifier>{fde0bae0-e331-4ae1-966f-20e6f5d42216}</UniqueIdentifier>
-    </Filter>
     <Filter Include="BackEnd">
       <UniqueIdentifier>{8eb59520-988b-4b39-927f-1ea32309fa06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghost">
+      <UniqueIdentifier>{f2caf132-3dcd-4a90-8f95-e8380f9bccde}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghost\Base Classes">
+      <UniqueIdentifier>{34cb1d51-fcf1-4653-9968-23e5f06b82ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ghost\Red Ghost">
+      <UniqueIdentifier>{1ef6b04e-1d35-4059-8f08-23c7e4e0c61e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Object">
+      <UniqueIdentifier>{ec1ebe19-1080-4b19-9909-2e97fc3194c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Object\Pacman">
+      <UniqueIdentifier>{fde0bae0-e331-4ae1-966f-20e6f5d42216}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -25,13 +37,22 @@
       <Filter>BackEnd</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Mics\HelloWorldScene.cpp">
-      <Filter>src</Filter>
+      <Filter>Misc</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Mics\AppDelegate.cpp">
-      <Filter>src</Filter>
+      <Filter>Misc</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\Pacman\Pacman.cpp">
-      <Filter>Pacman</Filter>
+    <ClCompile Include="..\Classes\BackEnd\HitBox.cpp">
+      <Filter>BackEnd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game Objects\Pacman\Pacman.cpp">
+      <Filter>Game Object\Pacman</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game Objects\GameObjectBase.cpp">
+      <Filter>Game Object</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackEnd\PhysicsComponents.cpp">
+      <Filter>BackEnd</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -42,13 +63,22 @@
       <Filter>BackEnd</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Mics\AppDelegate.h">
-      <Filter>src</Filter>
+      <Filter>Misc</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Mics\HelloWorldScene.h">
-      <Filter>src</Filter>
+      <Filter>Misc</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\Pacman\Pacman.h">
-      <Filter>Pacman</Filter>
+    <ClInclude Include="..\Classes\BackEnd\HitBox.h">
+      <Filter>BackEnd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game Objects\Pacman\Pacman.h">
+      <Filter>Game Object\Pacman</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game Objects\GameObjectBase.h">
+      <Filter>Game Object</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\PhysicsComponents.h">
+      <Filter>BackEnd</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

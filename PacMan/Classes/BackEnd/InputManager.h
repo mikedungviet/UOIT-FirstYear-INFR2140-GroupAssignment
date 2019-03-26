@@ -1,3 +1,8 @@
+/**
+ * @author Mike Pham - 100706123
+ * @author Rebecca Buckle - 100702016
+ * @author Maija Kinnunen - 100697620
+ */
 #pragma once
 
 //Header files

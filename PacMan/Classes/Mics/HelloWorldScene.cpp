@@ -5,8 +5,6 @@
 
 USING_NS_CC;
 
-#define KEYCODE cocos2d::EventKeyboard::KeyCode
-
 Scene* Level1::createScene()
 {
     // 'scene' is an autorelease object
@@ -28,7 +26,8 @@ bool Level1::init()
 	//Initiate game objects
 	character = new Pacman(this);
 
-	//Initiate keyboard manager
+
+	//Initiate keyboard input manager
 	keyboardManager = new KeyBoardInputManager(character);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(keyboardManager->getListener(), this);
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "cocos2d.h"
-#include "Pacman/Pacman.h"
+#include "Game Objects/Pacman/Pacman.h"
 #include "BackEnd/InputManager.h"
 
 class Level1 : public cocos2d::Scene
