@@ -23,9 +23,17 @@ bool Level1::init()
         return false;
     }
 
+	//Initiate game map
+	map = TMXTiledMap::create("TileMap.tmx");
+	//map->setPosition(200, 100);
+	//addChild(map,0,99);
+
 	//Initiate game objects
 	character = new Pacman(this);
+	wall = new Walls(Vec2(1000, 500), this);
+	wallList.push_back(wall);
 
+	collisionDetector = new CollisionDetection(this);
 
 	//Initiate keyboard input manager
 	keyboardManager = new KeyBoardInputManager(character);
@@ -39,5 +47,6 @@ bool Level1::init()
 void Level1::update(float delta)
 {
 	character->update(delta);
+	collisionDetector->checkForCollision();
 }
 

@@ -13,7 +13,7 @@
 /**
  * @brief This class is the base class for all game objects
  */
-class GameObjectBase
+class MovingGameObjectBase
 {
 protected:
 	//Shared data members with other derived classes
@@ -22,9 +22,9 @@ protected:
 	cocos2d::Sprite *sprite;
 
 	//Protected constructors
-	GameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity);
+	MovingGameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity);
 public:
-	virtual ~GameObjectBase();
+	virtual ~MovingGameObjectBase();
 
 	//Getters
 	cocos2d::Rect getHitbox() const;

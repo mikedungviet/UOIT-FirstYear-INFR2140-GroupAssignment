@@ -6,15 +6,15 @@
 #include "Game Objects/GameObjectBase.h"
 
 /**
- * @brief This is the constructor for the Game Object Base class. It will initialize
- * sprite, physics component, and hitbox data members 
+ * @brief This is the constructor for the moving game object base class. 
+ * It will initialize sprite, physics component, and hitbox data members 
  * 
  * @param sceneToAddSprite The scene to add the sprite to
  * @param aFileName The file name for the sprite
  * @param aStartPosition The starting position of the object
  * @param aVelocity The velocity of the object
  */
-GameObjectBase::GameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity)
+MovingGameObjectBase::MovingGameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity)
 	: physicsComponents(new PhysicsComponents(aStartPosition, aVelocity)), sprite(cocos2d::Sprite::create(aFileName))
 {
 	//Set up sprite
@@ -30,7 +30,7 @@ GameObjectBase::GameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::stri
  * @brief This is the destructor for game object base class.
  * This will deallocate all dynamically allocated data members
  */
-GameObjectBase::~GameObjectBase()
+MovingGameObjectBase::~MovingGameObjectBase()
 {
 	sprite->removeFromParentAndCleanup(true);
 	delete hitbox;
@@ -42,7 +42,7 @@ GameObjectBase::~GameObjectBase()
  * 
  * @return Returns cocos2d::Rect
  */
-cocos2d::Rect GameObjectBase::getHitbox() const
+cocos2d::Rect MovingGameObjectBase::getHitbox() const
 {
 	return hitbox->getHitBox();
 }
@@ -52,7 +52,7 @@ cocos2d::Rect GameObjectBase::getHitbox() const
  * 
  * @return Return PhysicsComponent pointer
  */
-PhysicsComponents* GameObjectBase::getPhysicsComponent() const
+PhysicsComponents* MovingGameObjectBase::getPhysicsComponent() const
 {
 	return physicsComponents;
 }
@@ -62,7 +62,7 @@ PhysicsComponents* GameObjectBase::getPhysicsComponent() const
  * 
  * @return Return the cocos2d::Sprite pointer
  */
-cocos2d::Sprite* GameObjectBase::getSprite() const
+cocos2d::Sprite* MovingGameObjectBase::getSprite() const
 {
 	return sprite;
 }
@@ -72,7 +72,7 @@ cocos2d::Sprite* GameObjectBase::getSprite() const
  * 
  * @param deltaTime The change of time of last frame to current frame
  */
-void GameObjectBase::update(const float& deltaTime)
+void MovingGameObjectBase::update(const float& deltaTime)
 {
 	physicsComponents->update(deltaTime);
 	sprite->setPosition(physicsComponents->position);

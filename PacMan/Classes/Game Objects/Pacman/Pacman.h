@@ -21,7 +21,7 @@ enum FacingDirection
  *@see cocos2d::Vec2
  *@see cocos2d::Sprite
  */
-class Pacman : public GameObjectBase
+class Pacman : public MovingGameObjectBase
 {
 public:
 	//Constructors and Destructor
