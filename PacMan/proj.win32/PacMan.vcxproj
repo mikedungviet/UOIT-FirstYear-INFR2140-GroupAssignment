@@ -160,6 +160,7 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\BackEnd\BackEnd.h" />
     <ClInclude Include="..\Classes\BackEnd\CollisionDetection.h" />
     <ClInclude Include="..\Classes\BackEnd\HitBox.h" />
     <ClInclude Include="..\Classes\BackEnd\InputManager.h" />

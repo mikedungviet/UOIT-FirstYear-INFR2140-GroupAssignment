@@ -12,29 +12,22 @@
 class Level1;
 
 
-
+/**
+ * This class goes through all Game Objects for a scene class and check for any collision
+ * using AABB collision detection
+ * 
+ */
 class CollisionDetection
 {
-	enum CollisionSide
-	{
-		right,
-		top,
-		left,
-		bot,
-		noCollision
-	};
-
 	Level1 *sceneToPerformDetection;
 
 	//Member Function
 	template<class T, class V>
-	static CollisionSide checkCollisionSide(T* firstObject, V* secondObject);
+	static bool checkCollisionSide(T* mainObject, V* secondaryObject);
 
 public:
 	CollisionDetection(Level1* aRunningScene);
-
 	void checkForCollision();
-
 };
 
 

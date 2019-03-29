@@ -22,5 +22,6 @@ PhysicsComponents::PhysicsComponents(const cocos2d::Vec2 &aPosition, const float
  */
 void PhysicsComponents::update(const float& deltaT)
 {
+	lastFramePosition = position;
 	position += velocity * direction * deltaT;
 }

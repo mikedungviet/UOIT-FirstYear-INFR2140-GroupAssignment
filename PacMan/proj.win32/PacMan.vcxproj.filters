@@ -95,6 +95,7 @@
     <ClInclude Include="..\Classes\BackEnd\CollisionDetection.h">
       <Filter>BackEnd</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\BackEnd.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

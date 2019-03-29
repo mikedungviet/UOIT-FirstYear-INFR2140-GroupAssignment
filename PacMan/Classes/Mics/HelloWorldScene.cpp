@@ -2,6 +2,7 @@
  * 
  */
 #include "HelloWorldScene.h"
+#include "BackEnd/BackEnd.h"
 
 USING_NS_CC;
 
@@ -30,8 +31,11 @@ bool Level1::init()
 
 	//Initiate game objects
 	character = new Pacman(this);
-	wall = new Walls(Vec2(1000, 500), this);
-	wallList.push_back(wall);
+	for (unsigned i = 904; i <= 1128; i += 32) 
+	{
+		auto wall = new Walls(Vec2(i, 500), this);
+		wallList.push_back(wall);
+	}
 
 	collisionDetector = new CollisionDetection(this);
 
@@ -48,5 +52,7 @@ void Level1::update(float delta)
 {
 	character->update(delta);
 	collisionDetector->checkForCollision();
+
+	character->updateSprite();
 }
 

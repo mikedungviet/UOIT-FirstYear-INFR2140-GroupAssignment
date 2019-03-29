@@ -2,9 +2,13 @@
 //Header Files
 #include "cocos2d.h"
 #include "Game Objects/Pacman/Pacman.h"
-#include "BackEnd/InputManager.h"
 #include "Game Objects/Others/Walls.h"
-#include "BackEnd/CollisionDetection.h"
+
+
+//Foward Declare Class
+class KeyBoardInputManager;
+class CollisionDetection;
+
 
 class Level1 : public cocos2d::Scene
 {
@@ -13,7 +17,6 @@ class Level1 : public cocos2d::Scene
 	Pacman *character;
 	KeyBoardInputManager *keyboardManager;
 	cocos2d::TMXTiledMap* map;
-	Walls *wall;
 	CollisionDetection *collisionDetector;
 
 	std::vector<Walls*> wallList;

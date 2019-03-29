@@ -17,7 +17,7 @@ class PhysicsComponents
 public:
 	float velocity;
 public:
-	cocos2d::Vec2 position, direction;
+	cocos2d::Vec2 position, direction, lastFramePosition;
 
 	explicit PhysicsComponents(const cocos2d::Vec2 &aPosition, const float &aVelocity = 0, const cocos2d::Vec2 &aDirection = cocos2d::Vec2(1, 0));
 

@@ -5,15 +5,15 @@
  */
 #include "Game Objects/GameObjectBase.h"
 
-/**
- * @brief This is the constructor for the moving game object base class. 
- * It will initialize sprite, physics component, and hitbox data members 
- * 
- * @param sceneToAddSprite The scene to add the sprite to
- * @param aFileName The file name for the sprite
- * @param aStartPosition The starting position of the object
- * @param aVelocity The velocity of the object
- */
+ /**
+  * @brief This is the constructor for the moving game object base class.
+  * It will initialize sprite, physics component, and hitbox data members
+  *
+  * @param sceneToAddSprite The scene to add the sprite to
+  * @param aFileName The file name for the sprite
+  * @param aStartPosition The starting position of the object
+  * @param aVelocity The velocity of the object
+  */
 MovingGameObjectBase::MovingGameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity)
 	: physicsComponents(new PhysicsComponents(aStartPosition, aVelocity)), sprite(cocos2d::Sprite::create(aFileName))
 {
@@ -39,7 +39,7 @@ MovingGameObjectBase::~MovingGameObjectBase()
 
 /**
  * @brief This returns the hit box as a rectangle
- * 
+ *
  * @return Returns cocos2d::Rect
  */
 cocos2d::Rect MovingGameObjectBase::getHitbox() const
@@ -49,7 +49,7 @@ cocos2d::Rect MovingGameObjectBase::getHitbox() const
 
 /**
  * @brief This function gets the physics components of the object
- * 
+ *
  * @return Return PhysicsComponent pointer
  */
 PhysicsComponents* MovingGameObjectBase::getPhysicsComponent() const
@@ -59,7 +59,7 @@ PhysicsComponents* MovingGameObjectBase::getPhysicsComponent() const
 
 /**
  * @brief This function get the sprite of the object
- * 
+ *
  * @return Return the cocos2d::Sprite pointer
  */
 cocos2d::Sprite* MovingGameObjectBase::getSprite() const
@@ -68,13 +68,35 @@ cocos2d::Sprite* MovingGameObjectBase::getSprite() const
 }
 
 /**
+ * @brief This function will be called when the moving object
+ * collides with a wall. It will set the collisionWithWall
+ * to true
+ */
+void MovingGameObjectBase::isCollidingWithWall()
+{
+	collisionWithWall = true;
+}
+
+/**
  * @brief This function updates the data members from last frame
- * 
+ *
  * @param deltaTime The change of time of last frame to current frame
  */
 void MovingGameObjectBase::update(const float& deltaTime)
 {
+	collisionWithWall = false;
 	physicsComponents->update(deltaTime);
-	sprite->setPosition(physicsComponents->position);
 	hitbox->update(physicsComponents->position);
+}
+
+/**
+ * @brief This function will update the sprite position if
+ * the object is not colliding with a wall
+ */
+void MovingGameObjectBase::updateSprite() const
+{
+	if (!collisionWithWall)
+		sprite->setPosition(physicsComponents->position);
+	else
+		physicsComponents->position = physicsComponents->lastFramePosition;
 }
