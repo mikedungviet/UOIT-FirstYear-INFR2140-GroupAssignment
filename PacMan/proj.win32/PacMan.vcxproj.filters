@@ -31,13 +31,19 @@
     <Filter Include="Game Object\Misc">
       <UniqueIdentifier>{440848da-c655-4e24-8977-f8798682c622}</UniqueIdentifier>
     </Filter>
+    <Filter Include="BackEnd\Physics">
+      <UniqueIdentifier>{f856d6bc-1487-4354-97c9-cf91833844df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BackEnd\Tools">
+      <UniqueIdentifier>{b4bb7335-81d1-45e2-a395-4c35953b7441}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc\Levels">
+      <UniqueIdentifier>{4795e392-fba4-4ad9-84c0-3e8c6c81343e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>win32</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Classes\BackEnd\InputManager.cpp">
-      <Filter>BackEnd</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Mics\HelloWorldScene.cpp">
       <Filter>Misc</Filter>
@@ -45,31 +51,40 @@
     <ClCompile Include="..\Classes\Mics\AppDelegate.cpp">
       <Filter>Misc</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BackEnd\HitBox.cpp">
-      <Filter>BackEnd</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Game Objects\Pacman\Pacman.cpp">
       <Filter>Game Object\Pacman</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\Game Objects\GameObjectBase.cpp">
       <Filter>Game Object</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\BackEnd\PhysicsComponents.cpp">
-      <Filter>BackEnd</Filter>
-    </ClCompile>
     <ClCompile Include="..\Classes\Game Objects\Others\Walls.cpp">
       <Filter>Game Object\Misc</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\BackEnd\HitBox.cpp">
+      <Filter>BackEnd\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackEnd\PhysicsComponents.cpp">
+      <Filter>BackEnd\Physics</Filter>
+    </ClCompile>
     <ClCompile Include="..\Classes\BackEnd\CollisionDetection.cpp">
-      <Filter>BackEnd</Filter>
+      <Filter>BackEnd\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackEnd\InputManager.cpp">
+      <Filter>BackEnd\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Mics\Levels\LevelBase.cpp">
+      <Filter>Misc\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Mics\Levels\Level1.cpp">
+      <Filter>Misc\Levels</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BackEnd\MapReader.cpp">
+      <Filter>BackEnd\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Classes\BackEnd\InputManager.h">
-      <Filter>BackEnd</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Mics\AppDelegate.h">
       <Filter>Misc</Filter>
@@ -77,25 +92,39 @@
     <ClInclude Include="..\Classes\Mics\HelloWorldScene.h">
       <Filter>Misc</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\BackEnd\HitBox.h">
-      <Filter>BackEnd</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Game Objects\Pacman\Pacman.h">
       <Filter>Game Object\Pacman</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\Game Objects\GameObjectBase.h">
       <Filter>Game Object</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\BackEnd\PhysicsComponents.h">
-      <Filter>BackEnd</Filter>
-    </ClInclude>
     <ClInclude Include="..\Classes\Game Objects\Others\Walls.h">
       <Filter>Game Object\Misc</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\HitBox.h">
+      <Filter>BackEnd\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\PhysicsComponents.h">
+      <Filter>BackEnd\Physics</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\BackEnd\CollisionDetection.h">
+      <Filter>BackEnd\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\InputManager.h">
+      <Filter>BackEnd\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Mics\Levels\LevelBase.h">
+      <Filter>Misc\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Mics\Levels\Level1.h">
+      <Filter>Misc\Levels</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\BackEnd.h">
       <Filter>BackEnd</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\BackEnd\BackEnd.h" />
+    <ClInclude Include="..\Classes\BackEnd\MapReader.h">
+      <Filter>BackEnd\Tools</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

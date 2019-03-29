@@ -5,12 +5,11 @@
  * @author Jackson Holder - 100701005
  */
 #pragma once
-
 //Header Files
 
 //Foward declare classes
 class Level1;
-
+class LevelBase;
 
 /**
  * This class goes through all Game Objects for a scene class and check for any collision
@@ -19,15 +18,15 @@ class Level1;
  */
 class CollisionDetection
 {
-	Level1 *sceneToPerformDetection;
+	LevelBase *sceneToPerformDetection;
 
 	//Member Function
 	template<class T, class V>
 	static bool checkCollisionSide(T* mainObject, V* secondaryObject);
 
 public:
-	CollisionDetection(Level1* aRunningScene);
-	void checkForCollision();
+	CollisionDetection(LevelBase* aRunningScene);
+	void checkForCollision() const;
 };
 
 

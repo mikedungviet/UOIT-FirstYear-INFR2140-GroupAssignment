@@ -1,5 +1,6 @@
 #include "AppDelegate.h"
 #include "HelloWorldScene.h"
+#include "Mics/Levels/Level1.h"
 
 USING_NS_CC;
 
@@ -19,8 +20,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    auto scene = Level1::createScene();
-    director->runWithScene(scene);
+    director->runWithScene(Level1::createScene());
 
     return true;
 }

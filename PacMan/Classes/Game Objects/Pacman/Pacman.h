@@ -25,7 +25,7 @@ class Pacman : public MovingGameObjectBase
 {
 public:
 	//Constructors and Destructor
-	Pacman(cocos2d::Scene *scene);
+	Pacman(const cocos2d::Vec2& startPosition, cocos2d::Scene *scene);
 	Pacman(const Pacman&) = delete;
 
 	//Setters

@@ -3,19 +3,20 @@
 
 
 Walls::Walls(const cocos2d::Vec2& aPosition, cocos2d::Scene *aSceneToAddWall)
-	: hitbox(new Hitbox(aPosition, 32, 32)), position(aPosition),
+	: hitbox(new Hitbox(aPosition - cocos2d::Size(32, 32) / 2, 32, 32)),
+	position(aPosition)
 	//Delete this after
-	sprite(cocos2d::Sprite::create("TileMap/Walls.png"))
+	//,sprite(cocos2d::Sprite::create("TileMap/Walls.png"))
 {
-	sprite->setPosition(aPosition);
-	aSceneToAddWall->addChild(sprite);
+	//sprite->setPosition(aPosition - cocos2d::Size(32, 32) / 2);
+	//aSceneToAddWall->addChild(sprite);
 }
 
 
 Walls::~Walls()
 {
 	delete hitbox;
-	sprite->removeFromParentAndCleanup(true);
+	//sprite->removeFromParentAndCleanup(true);
 }
 
 /**
@@ -30,7 +31,7 @@ cocos2d::Rect Walls::getHitbox() const
 
 /**
  * @brief This function returns the position of the wall
- * 
+ *
  * @return Return the wall's position as cocos2d::Vec2
  */
 cocos2d::Vec2 Walls::getPosition() const

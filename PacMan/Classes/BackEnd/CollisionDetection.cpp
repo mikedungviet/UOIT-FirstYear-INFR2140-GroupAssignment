@@ -6,12 +6,13 @@
  */
 #include "CollisionDetection.h"
 #include "Mics/HelloWorldScene.h"
+#include "Mics/Levels/LevelBase.h"
 
  /**
   * @brief This is the constructor for collision detection class. It needs a scene
   * with friend "power" so that it can checks for collision
   */
-CollisionDetection::CollisionDetection(Level1* aRunningScene)
+CollisionDetection::CollisionDetection(LevelBase* aRunningScene)
 	: sceneToPerformDetection(aRunningScene)
 {
 
@@ -22,7 +23,7 @@ CollisionDetection::CollisionDetection(Level1* aRunningScene)
  * @brief This function loops through all object in the current level and do collision check
  * with each other
  */
-void CollisionDetection::checkForCollision()
+void CollisionDetection::checkForCollision() const
 {
 	//TODO: Check Pacman vs Fruit and other stuffs
 
@@ -30,8 +31,8 @@ void CollisionDetection::checkForCollision()
 	//TODO: Check Pacman and Ghost vs Walls
 	for (auto i : sceneToPerformDetection->wallList)
 	{
-		if (checkCollisionSide(sceneToPerformDetection->character, i))
-			sceneToPerformDetection->character->isCollidingWithWall();
+		if (checkCollisionSide(sceneToPerformDetection->pacman, i))
+			sceneToPerformDetection->pacman->isCollidingWithWall();
 	}
 	//TODO: Check Pacman vs Ghost
 

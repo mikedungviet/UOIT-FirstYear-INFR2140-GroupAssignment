@@ -4,6 +4,9 @@
 //Class forward declared
 class Hitbox;
 
+/**
+ * @brief This wall
+ */
 class Walls
 {
 	Hitbox *hitbox{ nullptr };
