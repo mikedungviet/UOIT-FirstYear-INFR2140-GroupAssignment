@@ -25,9 +25,6 @@
     <Filter Include="Game Object\Ghost\Base Classes">
       <UniqueIdentifier>{34cb1d51-fcf1-4653-9968-23e5f06b82ff}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game Object\Ghost\Red Ghost">
-      <UniqueIdentifier>{1ef6b04e-1d35-4059-8f08-23c7e4e0c61e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game Object\Misc">
       <UniqueIdentifier>{440848da-c655-4e24-8977-f8798682c622}</UniqueIdentifier>
     </Filter>
@@ -39,6 +36,9 @@
     </Filter>
     <Filter Include="Misc\Levels">
       <UniqueIdentifier>{4795e392-fba4-4ad9-84c0-3e8c6c81343e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Object\Ghost\Ghost States">
+      <UniqueIdentifier>{8d10ebf6-cd3a-4199-b5df-bc2ef1526007}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -80,6 +80,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\BackEnd\MapReader.cpp">
       <Filter>BackEnd\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game Objects\Ghost\Base\GhostBase.cpp">
+      <Filter>Game Object\Ghost\Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Game Objects\Ghost\Base\RedGhost.cpp">
+      <Filter>Game Object\Ghost\Base Classes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +130,16 @@
     </ClInclude>
     <ClInclude Include="..\Classes\BackEnd\MapReader.h">
       <Filter>BackEnd\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BackEnd\BackEnd.h" />
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Base\GhostBase.h">
+      <Filter>Game Object\Ghost\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Ghost.h">
+      <Filter>Game Object\Ghost</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Base\RedGhost.h">
+      <Filter>Game Object\Ghost\Base Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

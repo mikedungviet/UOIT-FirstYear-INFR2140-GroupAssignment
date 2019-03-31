@@ -37,6 +37,15 @@ cocos2d::Rect Hitbox::getHitBox() const
 }
 
 /**
+ * @brief This function set the new size of the hitbox
+ * @param newSize The new size for the hitbox
+ */
+void Hitbox::setNewSize(const cocos2d::Size& newSize)
+{
+	size = newSize;
+}
+
+/**
  * @brief This function updates the hit box position
  * @param newPosition The new position of the object
  */

@@ -4,25 +4,28 @@
  * @author Maija Kinnunen - 100697620
  */
 #include "Game Objects/GameObjectBase.h"
+#include "cocos2d.h"
 
- /**
-  * @brief This is the constructor for the moving game object base class.
-  * It will initialize sprite, physics component, and hitbox data members
+/**
+ *@brief This is the constructor for the moving game object base class.
+  * It will initialize sprite (with no texture), physics component, and
+  * hitbox data members
   *
   * @param sceneToAddSprite The scene to add the sprite to
   * @param aFileName The file name for the sprite
   * @param aStartPosition The starting position of the object
   * @param aVelocity The velocity of the object
-  */
-MovingGameObjectBase::MovingGameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName, const cocos2d::Vec2& aStartPosition, const float& aVelocity)
-	: physicsComponents(new PhysicsComponents(aStartPosition, aVelocity)), sprite(cocos2d::Sprite::create(aFileName))
+ */
+MovingGameObjectBase::MovingGameObjectBase(cocos2d::Scene* sceneToAddSprite, const std::string& aFileName,
+	const cocos2d::Vec2& aStartPosition, const float& aVelocity)
+	:physicsComponents(new PhysicsComponents(aStartPosition, aVelocity)), sprite(cocos2d::Sprite::create(aFileName))
 {
 	//Set up sprite
-	sprite->setScale(2);
+	sprite->setScale(2.5);
 	sprite->setPosition(physicsComponents->position);
 	sceneToAddSprite->addChild(sprite);
 
-	//Set up hit box
+	//Hit up hitbox
 	hitbox = new Hitbox(aStartPosition, sprite->getBoundingBox().size);
 }
 
@@ -72,7 +75,7 @@ cocos2d::Sprite* MovingGameObjectBase::getSprite() const
  * collides with a wall. It will set the collisionWithWall
  * to true
  */
-void MovingGameObjectBase::isCollidingWithWall()
+void MovingGameObjectBase::setCollidingWithWall()
 {
 	collisionWithWall = true;
 }

@@ -154,6 +154,8 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClCompile Include="..\Classes\BackEnd\MapReader.cpp" />
     <ClCompile Include="..\Classes\BackEnd\PhysicsComponents.cpp" />
     <ClCompile Include="..\Classes\Game Objects\GameObjectBase.cpp" />
+    <ClCompile Include="..\Classes\Game Objects\Ghost\Base\GhostBase.cpp" />
+    <ClCompile Include="..\Classes\Game Objects\Ghost\Base\RedGhost.cpp" />
     <ClCompile Include="..\Classes\Game Objects\Others\Walls.cpp" />
     <ClCompile Include="..\Classes\Game Objects\Pacman\Pacman.cpp" />
     <ClCompile Include="..\Classes\Mics\AppDelegate.cpp" />
@@ -170,6 +172,9 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)\Resources\" /D /E /I /F /Y
     <ClInclude Include="..\Classes\BackEnd\MapReader.h" />
     <ClInclude Include="..\Classes\BackEnd\PhysicsComponents.h" />
     <ClInclude Include="..\Classes\Game Objects\GameObjectBase.h" />
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Base\GhostBase.h" />
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Base\RedGhost.h" />
+    <ClInclude Include="..\Classes\Game Objects\Ghost\Ghost.h" />
     <ClInclude Include="..\Classes\Game Objects\Others\Walls.h" />
     <ClInclude Include="..\Classes\Game Objects\Pacman\Pacman.h" />
     <ClInclude Include="..\Classes\Mics\AppDelegate.h" />

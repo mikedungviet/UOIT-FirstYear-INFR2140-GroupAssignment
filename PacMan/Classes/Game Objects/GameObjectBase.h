@@ -7,11 +7,18 @@
 
 //Header Files
 #include "BackEnd/HitBox.h"
-#include "cocos2d.h"
 #include "BackEnd/PhysicsComponents.h"
 
+//Class forward Declared
+namespace cocos2d
+{
+	class Sprite;
+	class Scene;
+}
+
 /**
- * @brief This class is the base class for all game objects
+ * @brief This class is the base class for all moving
+ * game objects
  */
 class MovingGameObjectBase
 {
@@ -36,8 +43,9 @@ public:
 	cocos2d::Sprite* getSprite() const;
 
 	//Setter
-	void isCollidingWithWall();
+	void setCollidingWithWall();
 
+	//Member function
 	virtual void update(const float& deltaTime);
 	void updateSprite() const;
 };

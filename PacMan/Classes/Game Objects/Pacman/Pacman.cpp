@@ -14,7 +14,6 @@
 Pacman::Pacman(const cocos2d::Vec2& startPosition, cocos2d::Scene *scene)
 	: MovingGameObjectBase(scene, "Pacman/Pacman0002.png", startPosition, 250)
 {
-	sprite->setScale(2.5);
 	sprite->setRotation(90);
 }
 

@@ -35,7 +35,10 @@ void CollisionDetection::checkForCollision() const
 			sceneToPerformDetection->pacman->isCollidingWithWall();
 	}
 	//TODO: Check Pacman vs Ghost
-
+	if (checkCollisionSide(sceneToPerformDetection->character, sceneToPerformDetection->redGhost))
+	{
+		sceneToPerformDetection->character->getPhysicsComponent()->position.set(500, 500);
+	}
 }
 
 /**

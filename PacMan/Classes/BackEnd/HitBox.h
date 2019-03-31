@@ -12,7 +12,7 @@
 class Hitbox
 {
 	//Private data members
-	const cocos2d::Size size;
+	cocos2d::Size size;
 	cocos2d::Rect hitboxRect;
 public:
 	//Constructors and Destructor
@@ -21,6 +21,9 @@ public:
 
 	//Getters
 	cocos2d::Rect getHitBox() const;
+
+	//Setters
+	void setNewSize(const cocos2d::Size& newSize);
 
 	//Member function
 	void update(const cocos2d::Vec2 &newPosition);
