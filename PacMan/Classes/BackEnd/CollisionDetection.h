@@ -9,7 +9,7 @@
 //Header Files
 
 //Foward declare classes
-class Level1;
+class LevelTest;
 
 
 /**
@@ -19,14 +19,14 @@ class Level1;
  */
 class CollisionDetection
 {
-	Level1 *sceneToPerformDetection;
+	LevelTest *sceneToPerformDetection;
 
 	//Member Function
 	template<class T, class V>
 	static bool checkCollisionSide(T* mainObject, V* secondaryObject);
 
 public:
-	CollisionDetection(Level1* aRunningScene);
+	CollisionDetection(LevelTest* aRunningScene);
 	void checkForCollision();
 };
 

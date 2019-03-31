@@ -19,7 +19,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    auto scene = Level1::createScene();
+    auto scene = LevelTest::createScene();
     director->runWithScene(scene);
 
     return true;

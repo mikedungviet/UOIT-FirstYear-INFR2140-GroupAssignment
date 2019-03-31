@@ -6,12 +6,13 @@
  */
 #include "CollisionDetection.h"
 #include "Mics/HelloWorldScene.h"
+#include "Game Objects/Ghost/Ghost.h"
 
  /**
   * @brief This is the constructor for collision detection class. It needs a scene
   * with friend "power" so that it can checks for collision
   */
-CollisionDetection::CollisionDetection(Level1* aRunningScene)
+CollisionDetection::CollisionDetection(LevelTest* aRunningScene)
 	: sceneToPerformDetection(aRunningScene)
 {
 
@@ -31,10 +32,13 @@ void CollisionDetection::checkForCollision()
 	for (auto i : sceneToPerformDetection->wallList)
 	{
 		if (checkCollisionSide(sceneToPerformDetection->character, i))
-			sceneToPerformDetection->character->isCollidingWithWall();
+			sceneToPerformDetection->character->setCollidingWithWall();
 	}
 	//TODO: Check Pacman vs Ghost
-
+	if (checkCollisionSide(sceneToPerformDetection->character, sceneToPerformDetection->redGhost))
+	{
+		sceneToPerformDetection->character->getPhysicsComponent()->position.set(500, 500);
+	}
 }
 
 /**

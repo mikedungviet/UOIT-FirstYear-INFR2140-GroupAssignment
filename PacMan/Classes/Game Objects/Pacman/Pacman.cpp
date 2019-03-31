@@ -6,14 +6,13 @@
 #include "Game Objects/Pacman/Pacman.h"
 
 
-/**
- * @brief This is the constructor for Pacman
- * @param scene The scene that pacman will be on
- */
+ /**
+  * @brief This is the constructor for Pacman
+  * @param scene The scene that pacman will be on
+  */
 Pacman::Pacman(cocos2d::Scene *scene)
-	: MovingGameObjectBase(scene,"Pacman/Pacman0002.png",cocos2d::Vec2(500,500),250)
+	: MovingGameObjectBase(scene, "Pacman/Pacman0002.png", cocos2d::Vec2(500, 500), 250)
 {
-	sprite->setScale(2.5);
 	sprite->setRotation(90);
 }
 

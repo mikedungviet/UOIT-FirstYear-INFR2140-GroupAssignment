@@ -8,9 +8,10 @@
 //Foward Declare Class
 class KeyBoardInputManager;
 class CollisionDetection;
+class RedGhost;
 
 
-class Level1 : public cocos2d::Scene
+class LevelTest : public cocos2d::Scene
 {
 	friend class CollisionDetection;
 
@@ -18,6 +19,7 @@ class Level1 : public cocos2d::Scene
 	KeyBoardInputManager *keyboardManager;
 	cocos2d::TMXTiledMap* map;
 	CollisionDetection *collisionDetector;
+	RedGhost *redGhost;
 
 	std::vector<Walls*> wallList;
 
@@ -29,5 +31,5 @@ public:
 	//Update functions
 	void update(float delta) override;
 
-    CREATE_FUNC(Level1);
+    CREATE_FUNC(LevelTest);
 };
