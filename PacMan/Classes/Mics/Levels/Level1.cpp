@@ -23,10 +23,10 @@ bool Level1::init()
 	//Init map
 	map = cocos2d::TMXTiledMap::create("TileMap/TileMap.tmx");
 	map->setPosition(cocos2d::Vec2(500, 50));
-	addChild(map,1);
+	addChild(map,1);	
 
 	//Init objects
-	pacman = new Pacman(cocos2d::Vec2(950,415), this);
+	pacman = new Pacman(cocos2d::Vec2(950,405), this);
 
 	//Init backend Tools
 	collisionDetector = new CollisionDetection(this);
@@ -36,6 +36,9 @@ bool Level1::init()
 
 	//Init Walls
 	wallList = mapReader->readForWalls();
+	ghostWallList = mapReader->readForGhostWalls();
+	spawnZoneForGhost = mapReader->readGhostSpawnZone();
+
 
 	this->scheduleUpdate();
 	return true;

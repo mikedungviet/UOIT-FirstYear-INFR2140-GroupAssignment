@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <math/CCGeometry.h>
 
 //Class Forward Declare
 class Pacman;
@@ -7,6 +8,7 @@ class Walls;
 class CollisionDetection;
 class KeyBoardInputManager;
 class MapReader;
+class GhostWall;
 
 namespace cocos2d 
 {
@@ -24,8 +26,11 @@ protected:
 
 	//Protected Data members
 	Pacman *pacman;
-	std::vector<Walls*> wallList;
+	
 	cocos2d::TMXTiledMap *map;
+	std::vector<Walls*> wallList;
+	std::vector<GhostWall*> ghostWallList;
+	cocos2d::Rect spawnZoneForGhost;
 
 	//Protected Backend Tools
 	CollisionDetection *collisionDetector;

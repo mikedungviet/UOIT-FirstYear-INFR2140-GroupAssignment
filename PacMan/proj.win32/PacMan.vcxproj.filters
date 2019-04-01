@@ -87,6 +87,9 @@
     <ClCompile Include="..\Classes\Game Objects\Ghost\Base\RedGhost.cpp">
       <Filter>Game Object\Ghost\Base Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Game Objects\Others\GhostWall.cpp">
+      <Filter>Game Object\Misc</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -140,6 +143,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\Game Objects\Ghost\Base\RedGhost.h">
       <Filter>Game Object\Ghost\Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Game Objects\Others\GhostWall.h">
+      <Filter>Game Object\Misc</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

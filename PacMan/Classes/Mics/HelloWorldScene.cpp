@@ -31,10 +31,10 @@ bool LevelTest::init()
 	//addChild(map,0,99);
 
 	//Initiate game objects
-	character = new Pacman(this);
+	//character = new Pacman(this);
 	redGhost = new RedGhost(this, Vec2(1000, 500), 0);
 
-	collisionDetector = new CollisionDetection(this);
+	//collisionDetector = new CollisionDetection(this);
 
 	//Initiate keyboard input manager
 	keyboardManager = new KeyBoardInputManager(character);

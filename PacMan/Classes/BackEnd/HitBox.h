@@ -5,7 +5,7 @@
  */
 #pragma once
 
-//Header Files
+ //Header Files
 #include <math/CCGeometry.h>
 
 
@@ -16,8 +16,8 @@ class Hitbox
 	cocos2d::Rect hitboxRect;
 public:
 	//Constructors and Destructor
-	Hitbox(const cocos2d::Vec2& position, float aWidth, float aHeight);
-	Hitbox(const cocos2d::Vec2& position, const cocos2d::Size& aSize);
+	Hitbox(const cocos2d::Vec2& position, float aWidth = 32, float aHeight = 32);
+	Hitbox(const cocos2d::Vec2& position, const cocos2d::Size& aSize = cocos2d::Size(32,32));
 
 	//Getters
 	cocos2d::Rect getHitBox() const;
